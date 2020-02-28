@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://script/DashedLine.gd" type="Script" id=1]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 9.73922, 11.2295 )
+b = Vector2( 790.155, 11.2528 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 791.344, 590.861 )
+b = Vector2( 9.57664, 590.71 )
+
+[node name="PlayBox" type="StaticBody2D"]
+
+[node name="Bounds" type="Line2D" parent="."]
+position = Vector2( 0, 73.4247 )
+scale = Vector2( 1, 0.821918 )
+points = PoolVector2Array( 790, 10, 790, 590, 10, 590, 9.99998, 10, 790, 10 )
+width = 2.0
+default_color = Color( 0.360784, 0.360784, 0.360784, 1 )
+
+[node name="Middle" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="SourceLine" type="Line2D" parent="Middle"]
+visible = false
+points = PoolVector2Array( 400, 82.5241, 399.911, 557.518 )
+width = 2.0
+default_color = Color( 0.545098, 0.545098, 0.545098, 1 )
+
+[node name="CollisionTop" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 69.9474 )
+shape = SubResource( 1 )
+
+[node name="CollisionBottom" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -32 )
+shape = SubResource( 2 )

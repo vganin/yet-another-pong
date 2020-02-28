@@ -1,0 +1,8 @@
+build/*
+logs/*
+!.gdignore
+
+# Godot-specific ignores
+.import/
+
+.DS_Store

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/Player.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.78808, 25 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"remote_collidable",
+]]
+script = ExtResource( 1 )
+speed = 550
+max_tilt = 30.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2.0
+margin_top = -25.0
+margin_right = 2.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 2.5, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="TiltTween" type="Tween" parent="."]
+playback_speed = 3.0
+playback/speed = 3.0
