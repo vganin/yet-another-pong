@@ -1,8 +1,11 @@
 build/*
+!build/deploy.sh
+!build/prepare_mac_for_deploy.sh
+!build/prepare_win_for_deploy.sh
 logs/*
-!.gdignore
 
 # Godot-specific ignores
 .import/
+!.gdignore
 
 .DS_Store
