@@ -137,5 +137,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="button_up" from="Buttons/Host" to="." method="_on_HostButton_button_up"]
 [connection signal="button_up" from="Buttons/Connect" to="." method="_on_ConnectButton_button_up"]

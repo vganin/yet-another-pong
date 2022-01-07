@@ -160,10 +160,7 @@ position = Vector2( 400, 320 )
 [node name="SpawnPoint" type="Position2D" parent="Player1Stuff"]
 position = Vector2( 30, 320 )
 
-[node name="Goal" type="StaticBody2D" parent="Player1Stuff" groups=[
-"goals",
-"remote_collidable",
-]]
+[node name="Goal" type="StaticBody2D" parent="Player1Stuff" groups=["goals", "remote_collidable"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1Stuff/Goal"]
 position = Vector2( -1, 0 )
@@ -177,8 +174,8 @@ margin_right = 74.0
 margin_bottom = 81.0
 size_flags_horizontal = 13
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -189,10 +186,7 @@ __meta__ = {
 [node name="SpawnPoint" type="Position2D" parent="Player2Stuff"]
 position = Vector2( 770, 320 )
 
-[node name="Goal" type="StaticBody2D" parent="Player2Stuff" groups=[
-"goals",
-"remote_collidable",
-]]
+[node name="Goal" type="StaticBody2D" parent="Player2Stuff" groups=["goals", "remote_collidable"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Stuff/Goal"]
 position = Vector2( 781, 0 )
@@ -210,8 +204,8 @@ grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 12
 size_flags_vertical = 12
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -257,12 +251,13 @@ rect_scale = Vector2( 0.93, 0.93 )
 rect_pivot_offset = Vector2( 160, 160 )
 size_flags_horizontal = 12
 size_flags_vertical = 12
-custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 0.9 )
+custom_fonts/font = SubResource( 8 )
 text = "3"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
 [connection signal="button_up" from="UI/BackToLobby" to="." method="_on_BackToLobby_button_up"]

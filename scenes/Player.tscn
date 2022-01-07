@@ -5,9 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1.78808, 25 )
 
-[node name="Player" type="KinematicBody2D" groups=[
-"remote_collidable",
-]]
+[node name="Player" type="KinematicBody2D" groups=["remote_collidable"]]
 script = ExtResource( 1 )
 speed = 550
 max_tilt = 30.0

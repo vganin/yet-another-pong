@@ -21,7 +21,6 @@ color = Color( 1, 0.0784314, 0.0784314, 0.572549 )
 
 [node name="Circle" type="Node2D" parent="."]
 script = ExtResource( 2 )
-color = Color( 1, 1, 1, 1 )
 radius = 5.0
 
 [node name="PopSound" type="AudioStreamPlayer" parent="."]
